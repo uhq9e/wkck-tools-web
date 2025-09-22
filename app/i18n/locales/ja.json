@@ -1,0 +1,48 @@
+{
+  "site": {
+    "title": "WKCK ゆゆゆツールボックス"
+  },
+  "shared": {
+    "generate": "生成",
+    "moreTools": "その他のツール",
+    "language": "言語",
+    "languageNames": {
+      "zh": "中国語",
+      "ja": "日本語",
+      "en": "英語"
+    },
+    "options": "オプション"
+  },
+  "pages": {
+    "/logo-generator": {
+      "title": "勇者であるシリーズ（ゆゆゆ）ロゴジェネレーター",
+      "description": "勇者であるシリーズ（ゆゆゆ）のロゴをカスタマイズで生成するツール",
+      "firstLine": "一行目",
+      "secondLine": "二行目",
+      "selectSeries": "シリーズを選択",
+      "seriesNames": {
+        "yuyuyu": "結城友奈は勇者である",
+        "wasuyu": "鷲尾須美は勇者である",
+        "nowayu": "乃木若葉は勇者である",
+        "kumeyu": "楠芽吹は勇者である",
+        "uhimi": "上里ひなたは巫女である"
+      },
+      "series": "シリーズ",
+      "saveImage": "画像を保存",
+      "saveImageSVG": "SVGを保存",
+      "vertical": "縦向き",
+      "center": "中央揃え",
+      "customizationMode": "カスタマイズモード",
+      "outlineColor": "輪郭線の色",
+      "backgroundBoxColor": "背景ボックスの色",
+      "foregroundBoxColor": "前景ボックスの色",
+      "textColor": "テキストの色",
+      "textHighlightColor": "ハイライトテキストの色",
+      "backgroundImage": "背景画像",
+      "offsetMainAxis": "主軸オフセット",
+      "offsetCrossAxis": "交差軸オフセット",
+      "highlightHint": "＼ 文字をクリックするとハイライトを切り替えられるよ！ ／",
+      "hideBackground": "背景を非表示"
+    }
+  }
+}

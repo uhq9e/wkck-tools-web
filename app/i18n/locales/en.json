@@ -1,0 +1,48 @@
+{
+  "site": {
+    "title": "WKCK YuYuYu Tools"
+  },
+  "shared": {
+    "generate": "Generate",
+    "moreTools": "More tools",
+    "language": "Language",
+    "languageNames": {
+      "zh": "Chinese",
+      "ja": "Japanese",
+      "en": "English"
+    },
+    "options": "Options"
+  },
+  "pages": {
+    "/logo-generator": {
+      "title": "Yuusha de Aru series (YuYuYu) Logo Generator",
+      "description": "Generate Yuusha de Aru series (YuYuYu) logo",
+      "firstLine": "First Line",
+      "secondLine": "Second Line",
+      "selectSeries": "Select Series",
+      "seriesNames": {
+        "yuyuyu": "Yuuki Yuuna is a Hero",
+        "wasuyu": "Washio Sumi is a Hero",
+        "nowayu": "Nogi Wakaba is a Hero",
+        "kumeyu": "Kusunoki Mebuki is a Hero",
+        "uhimi": "Uesato Hinata is a Miko"
+      },
+      "series": "Series",
+      "saveImage": "Save Image",
+      "saveImageSVG": "Save SVG",
+      "vertical": "Vertical",
+      "center": "Center Align",
+      "customizationMode": "Customization Mode",
+      "outlineColor": "Outline Color",
+      "backgroundBoxColor": "Background Box Color",
+      "foregroundBoxColor": "Foreground Box Color",
+      "textColor": "Text Color",
+      "textHighlightColor": "Highlight Text Color",
+      "backgroundImage": "Background Image",
+      "offsetMainAxis": "Main Axis Offset",
+      "offsetCrossAxis": "Cross Axis Offset",
+      "highlightHint": "＼ Click the box to switch highlights! ／",
+      "hideBackground": "Hide Background"
+    }
+  }
+}

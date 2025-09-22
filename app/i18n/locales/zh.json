@@ -1,0 +1,48 @@
+{
+  "site": {
+    "title": "WKCK YuYuYu工具箱"
+  },
+  "shared": {
+    "generate": "生成",
+    "moreTools": "更多工具",
+    "language": "语言",
+    "languageNames": {
+      "zh": "中文",
+      "ja": "日语",
+      "en": "英语"
+    },
+    "options": "选项"
+  },
+  "pages": {
+    "/logo-generator": {
+      "title": "是勇者系列（YuYuYu）Logo生成器",
+      "description": "自定义生成是勇者系列（YuYuYu）的Logo",
+      "firstLine": "第一行",
+      "secondLine": "第二行",
+      "selectSeries": "选择系列",
+      "seriesNames": {
+        "yuyuyu": "结城友奈是勇者",
+        "wasuyu": "鹫尾须美是勇者",
+        "nowayu": "乃木若叶是勇者",
+        "kumeyu": "楠芽吹是勇者",
+        "uhimi": "上里日向是巫女"
+      },
+      "series": "系列",
+      "saveImage": "保存图片",
+      "saveImageSVG": "保存SVG",
+      "vertical": "纵向",
+      "center": "居中",
+      "customizationMode": "自定义模式",
+      "outlineColor": "轮廓线颜色",
+      "backgroundBoxColor": "背景框颜色",
+      "foregroundBoxColor": "前景框颜色",
+      "textColor": "文本颜色",
+      "textHighlightColor": "高亮文本颜色",
+      "backgroundImage": "背景图片",
+      "offsetMainAxis": "主轴偏移",
+      "offsetCrossAxis": "交叉轴偏移",
+      "highlightHint": "＼ 点击框框可以切换高亮哦！ ／",
+      "hideBackground": "隐藏背景"
+    }
+  }
+}
