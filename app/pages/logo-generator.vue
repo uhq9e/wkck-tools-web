@@ -551,3 +551,9 @@ watch(currentSeries, (newSelectedSeries, oldSelectedSeries) => {
     </div>
   </div>
 </template>
+
+<style>
+svg g[id^="char_"] {
+  cursor: pointer;
+}
+</style>
