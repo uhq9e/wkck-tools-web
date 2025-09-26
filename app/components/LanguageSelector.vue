@@ -1,12 +1,10 @@
 <script lang="ts" setup>
 const { locale, locales, setLocale } = useI18n();
+const switchLocalePath = useSwitchLocalePath();
 </script>
 
 <template>
-  <Select
-    :model-value="locale"
-    @update:model-value="(v) => setLocale(v as typeof locale)"
-  >
+  <Select :model-value="locale">
     <SelectTrigger class="w-40">
       <Icon name="lucide:languages" />
       <SelectValue :placeholder="$t('shared.language')" />
@@ -14,12 +12,13 @@ const { locale, locales, setLocale } = useI18n();
     <SelectContent>
       <SelectGroup>
         <SelectLabel>{{ $t("shared.language") }}</SelectLabel>
-        <SelectItem
+        <NuxtLink
           v-for="locale in locales"
           :key="locale.code"
-          :value="locale.code"
-          >{{ $t(`shared.languageNames.${locale.code}`) }}</SelectItem
+          :to="switchLocalePath(locale.code)"
         >
+          <SelectItem :value="locale.code">{{ locale.name }}</SelectItem>
+        </NuxtLink>
       </SelectGroup>
     </SelectContent>
   </Select>

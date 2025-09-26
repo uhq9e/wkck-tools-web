@@ -30,9 +30,9 @@ export default defineNuxtConfig({
   i18n: {
     restructureDir: "app/i18n",
     locales: [
-      { code: "en", language: "en-US", file: "en.json" },
-      { code: "ja", language: "ja-JP", file: "ja.json" },
-      { code: "zh", language: "zh-CN", file: "zh.json" },
+      { code: "en", language: "en-US", name: "English", file: "en.json" },
+      { code: "ja", language: "ja-JP", name: "日本語", file: "ja.json" },
+      { code: "zh", language: "zh-CN", name: "简体中文", file: "zh.json" },
     ],
     defaultLocale: "en",
     strategy: "prefix_except_default",

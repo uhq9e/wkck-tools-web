@@ -6,11 +6,6 @@
     "generate": "生成",
     "moreTools": "その他のツール",
     "language": "言語",
-    "languageNames": {
-      "zh": "中国語",
-      "ja": "日本語",
-      "en": "英語"
-    },
     "options": "オプション"
   },
   "pages": {
