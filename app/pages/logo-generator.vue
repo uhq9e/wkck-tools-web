@@ -238,6 +238,7 @@ watch(currentSeries, (newSelectedSeries, oldSelectedSeries) => {
   <div class="size-full flex flex-col">
     <div class="flex flex-wrap gap-3">
       <p class="text-2xl font-bold">{{ $t("pages./logo-generator.title") }}</p>
+      <Button variant="outline">API</Button>
       <LanguageSelector />
     </div>
     <div class="grow flex flex-col justify-center items-center gap-4 my-4">
