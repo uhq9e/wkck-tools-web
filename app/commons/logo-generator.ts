@@ -11,6 +11,8 @@ export type SeriesInfo = {
   };
 };
 
+export const seriesNames = ["yuyuyu", "wasuyu", "nowayu", "kumeyu", "uhimi"] as const;
+
 export const seriesInfo = {
   yuyuyu: {
     meta: yuyuyu,
@@ -57,6 +59,8 @@ export const seriesInfo = {
       center: true as boolean,
     },
   },
-} satisfies Record<string, SeriesInfo>;
+} satisfies Record<(typeof seriesNames)[number], SeriesInfo>;
+
+export const availableSeries = Object.keys(seriesInfo) as Series[];
 
 export type Series = keyof typeof seriesInfo;

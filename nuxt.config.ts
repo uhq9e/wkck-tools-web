@@ -23,6 +23,9 @@ export default defineNuxtConfig({
       extensions: ["vue"],
     },
   ],
+  devServer: {
+    port: 2362,
+  },
   shadcn: {
     prefix: "",
     componentDir: "./app/components/ui",

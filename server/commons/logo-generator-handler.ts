@@ -1,4 +1,3 @@
-import { z } from "zod";
 import { LogoGenerator } from "dearu-logo-generator";
 import type {
   IHighlightRange,
@@ -6,34 +5,8 @@ import type {
 } from "dearu-logo-generator/types/lib/types/shared";
 import sharp from "sharp";
 import type { H3Event, EventHandlerRequest } from "h3";
-
+import { AvailableFormat, LogoGeneratorInputSchema } from "./constants";
 import { seriesInfo } from "~/commons/logo-generator";
-
-const series = ["yuyuyu", "wasuyu", "nowayu", "kumeyu", "uhimi"] as const;
-const availableFormat = ["png", "svg"] as const;
-type AvailableFormat = (typeof availableFormat)[number];
-
-const hexColorRegex = /^#([0-9a-fA-F]{6}|[0-9a-fA-F]{3})$/;
-
-const LogoGeneratorInputSchema = z.object({
-  series: z.enum(series).default("yuyuyu"),
-  text1: z.string().max(100).optional(),
-  text2: z.string().max(100).optional(),
-  vertical: z.coerce.boolean().optional(),
-  centered: z.coerce.boolean().optional(),
-  outlineColor: z.string().regex(hexColorRegex).optional(),
-  backgroundBoxColor: z.string().regex(hexColorRegex).optional(),
-  foregroundBoxColor: z.string().regex(hexColorRegex).optional(),
-  textColor: z.string().regex(hexColorRegex).optional(),
-  textHighlightColor: z.string().regex(hexColorRegex).optional(),
-  offsetMainAxis: z.coerce.number().min(-1).max(1).default(0),
-  offsetCrossAxis: z.coerce.number().min(-1).max(1).default(0),
-  highlight: z
-    .string()
-    .regex(/^(?:\d+:\d+(?:-\d+)?)(?:,\d+:\d+(?:-\d+)?)*$/)
-    .optional(),
-  format: z.enum(availableFormat).default("png"),
-});
 
 export const logoGeneratorHandler =
   (config?: { specifiedFormat?: AvailableFormat }) =>
@@ -91,13 +64,15 @@ export const logoGeneratorHandler =
       input.centered ?? currentSeries.initials.center
     );
 
+    setResponseHeader(
+      event,
+      "Cache-Control",
+      "public, max-age=31536000, immutable"
+    );
+    setResponseHeader(event, "Access-Control-Allow-Origin", "*");
+
     if (specifiedFormat ?? input.format === "svg") {
       setResponseHeader(event, "Content-Type", "image/svg+xml");
-      setResponseHeader(
-        event,
-        "Cache-Control",
-        "public, max-age=31536000, immutable"
-      );
       return svgEl.outerHTML;
     } else {
       const pngBuffer = await sharp(Buffer.from(svgEl.outerHTML))
@@ -105,11 +80,6 @@ export const logoGeneratorHandler =
         .toBuffer();
 
       setResponseHeader(event, "Content-Type", "image/png");
-      setResponseHeader(
-        event,
-        "Cache-Control",
-        "public, max-age=31536000, immutable"
-      );
       return pngBuffer;
     }
   };
