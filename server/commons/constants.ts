@@ -7,6 +7,10 @@ export const availableFormat = ["png", "svg"] as const;
 export type AvailableFormat = (typeof availableFormat)[number];
 
 const hexColorRegex = /^#([0-9a-fA-F]{6}|[0-9a-fA-F]{3})$/;
+const booleanValueTransformer = z.transform((val: string) => {
+  if (val === "true") return true;
+  else return false;
+});
 
 export const LogoGeneratorInputSchema = z.object({
   series: z
@@ -21,11 +25,11 @@ export const LogoGeneratorInputSchema = z.object({
     description: "Second line of text to be displayed on the logo",
     example: "勇者である",
   }),
-  vertical: z.coerce.boolean().optional().meta({
+  vertical: z.string().pipe(booleanValueTransformer).optional().meta({
     description: "Whether to display the logo vertically",
     example: false,
   }),
-  centered: z.coerce.boolean().optional().meta({
+  centered: z.string().pipe(booleanValueTransformer).optional().meta({
     description: "Whether to center the text",
     example: false,
   }),
