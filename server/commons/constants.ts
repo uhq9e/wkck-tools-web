@@ -25,14 +25,24 @@ export const LogoGeneratorInputSchema = z.object({
     description: "Second line of text to be displayed on the logo",
     example: "勇者である",
   }),
-  vertical: z.string().pipe(booleanValueTransformer).optional().meta({
-    description: "Whether to display the logo vertically",
-    example: false,
-  }),
-  centered: z.string().pipe(booleanValueTransformer).optional().meta({
-    description: "Whether to center the text",
-    example: false,
-  }),
+  vertical: z
+    .string()
+    .pipe(booleanValueTransformer)
+    .optional()
+    .meta({
+      description: "Whether to display the logo vertically",
+      example: false,
+      override: { type: "boolean" },
+    }),
+  centered: z
+    .string()
+    .pipe(booleanValueTransformer)
+    .optional()
+    .meta({
+      description: "Whether to center the text",
+      example: false,
+      override: { type: "boolean" },
+    }),
   outlineColor: z.string().regex(hexColorRegex).optional().meta({
     description: "Color of the outline in hex format",
     example: "#ffffff",
