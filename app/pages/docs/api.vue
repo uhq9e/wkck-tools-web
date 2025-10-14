@@ -2,6 +2,11 @@
 import { SwaggerUIBundle } from "swagger-ui-dist";
 import { apiSpec } from "../../../server/commons/openapi";
 
+useSeoMeta({
+  title: apiSpec.info.title,
+  description: apiSpec.info.description,
+});
+
 const swaggerDomNode = ref(null);
 
 onMounted(() => {
