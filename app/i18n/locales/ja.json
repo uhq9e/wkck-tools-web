@@ -1,17 +1,19 @@
 {
   "site": {
-    "title": "WKCK ゆゆゆツールボックス"
+    "title": "WKCKツールボックス",
+    "description": "自作ツール置き場"
   },
   "shared": {
     "generate": "生成",
     "moreTools": "その他のツール",
     "language": "言語",
-    "options": "オプション"
+    "options": "オプション",
+    "share": "シェア"
   },
   "pages": {
     "/logo-generator": {
       "title": "勇者であるシリーズ（ゆゆゆ）ロゴジェネレーター",
-      "description": "勇者であるシリーズ（ゆゆゆ）のロゴをカスタマイズで生成するツール",
+      "description": "勇者であるシリーズ（ゆゆゆ）のロゴをカスタマイズで生成します",
       "firstLine": "一行目",
       "secondLine": "二行目",
       "selectSeries": "シリーズを選択",
@@ -36,8 +38,20 @@
       "backgroundImage": "背景画像",
       "offsetMainAxis": "主軸オフセット",
       "offsetCrossAxis": "交差軸オフセット",
-      "highlightHint": "＼ 文字をクリックするとハイライトを切り替えられるよ！ ／",
+      "highlightHint": "＼ 文字をクリックするとハイライトが切り替わるよ！ ／",
       "hideBackground": "背景を非表示"
+    },
+    "/wkck-mannaka-birthday": {
+      "title": "わかちか真ん中バースデーカウントダウン",
+      "description": "次のわかちか真ん中バースデーまでひたすらカウントダウンします",
+      "caption": "次のわかちか真ん中バースデー {birthday} まであと {countdown}",
+      "shareTextTemplate": "次のわかちか真ん中バースデー（{birthday}）まであと{countdown}です。",
+      "countdownTemplate": "{days}{daysWord}{hours}{hoursWord}{minutes}{minutesWord}{seconds}{secondsWord}",
+      "months": "ヶ月",
+      "days": "日",
+      "hours": "時間",
+      "minutes": "分",
+      "seconds": "秒"
     }
   }
 }

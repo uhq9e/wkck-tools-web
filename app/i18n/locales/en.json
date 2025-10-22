@@ -1,12 +1,14 @@
 {
   "site": {
-    "title": "WKCK YuYuYu Tools"
+    "title": "WKCK Tools",
+    "description": "Self-Made Tools Repository"
   },
   "shared": {
     "generate": "Generate",
     "moreTools": "More tools",
     "language": "Language",
-    "options": "Options"
+    "options": "Options",
+    "share": "Share"
   },
   "pages": {
     "/logo-generator": {
@@ -38,6 +40,18 @@
       "offsetCrossAxis": "Cross Axis Offset",
       "highlightHint": "＼ Click the box to switch highlights! ／",
       "hideBackground": "Hide Background"
+    },
+    "/wkck-mannaka-birthday": {
+      "title": "WakaChika Halfway Birthday Countdown",
+      "description": "Counting down to the next WakaChika Halfway Birthday",
+      "caption": "{countdown} until the next WakaChika Halfway Birthday {birthday}",
+      "shareTextTemplate": "{countdown} until the next WakaChika Halfway Birthday ({birthday}).",
+      "countdownTemplate": "{days} {daysWord}, {hours} {hoursWord}, {minutes} {minutesWord} and {seconds} {secondsWord}",
+      "months": "months | month | months",
+      "days": "days | day | days",
+      "hours": "hours | hour | hours",
+      "minutes": "minutes | minute | minutes",
+      "seconds": "seconds | second | seconds"
     }
   }
 }

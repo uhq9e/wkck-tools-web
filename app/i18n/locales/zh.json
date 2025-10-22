@@ -1,12 +1,14 @@
 {
   "site": {
-    "title": "WKCK YuYuYu工具箱"
+    "title": "WKCK工具箱",
+    "description": "自制工具仓库"
   },
   "shared": {
     "generate": "生成",
     "moreTools": "更多工具",
     "language": "语言",
-    "options": "选项"
+    "options": "选项",
+    "share": "分享"
   },
   "pages": {
     "/logo-generator": {
@@ -38,6 +40,18 @@
       "offsetCrossAxis": "交叉轴偏移",
       "highlightHint": "＼ 点击框框可以切换高亮哦！ ／",
       "hideBackground": "隐藏背景"
+    },
+    "/wkck-mannaka-birthday": {
+      "title": "若千中间日倒计时",
+      "description": "一直倒数到下一个若千中间日",
+      "caption": "距离下一个若千中间日 {birthday} 还有 {countdown}",
+      "shareTextTemplate": "距离下一个若千中间日（{birthday}）还有{countdown}。",
+      "countdownTemplate": "{days}{daysWord}{hours}{hoursWord}{minutes}{minutesWord}{seconds}{secondsWord}",
+      "months": "个月",
+      "days": "天",
+      "hours": "小时",
+      "minutes": "分钟",
+      "seconds": "秒"
     }
   }
 }

@@ -1,14 +1,22 @@
 <script setup lang="ts">
+import { siteHost } from "~/misc";
+
 const head = useLocaleHead();
+
+useSeoMeta({
+  title: $t("site.title"),
+  description: $t("site.description"),
+  ogTitle: $t("site.title"),
+  ogDescription: $t("site.description"),
+  ogImage: `${siteHost}/og.webp`,
+  twitterCard: "summary",
+});
 </script>
 
 <template>
   <main class="p-4 relative overflow-y-auto">
     <Html :lang="head.htmlAttrs.lang">
       <Head>
-        <Title>
-          {{ $t("site.title") }}
-        </Title>
         <template v-for="link in head.link" :key="link.key">
           <Link
             :id="link.key"
