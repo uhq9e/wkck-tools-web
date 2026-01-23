@@ -9,7 +9,7 @@
     "language": "言語",
     "options": "オプション",
     "share": "シェア",
-    "addToCalendar": "Googleカレンダーに追加"
+    "addToGoogleCalendar": "Googleカレンダーに追加"
   },
   "pages": {
     "/logo-generator": {
