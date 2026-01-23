@@ -6,7 +6,7 @@ export function calcNextHalfwayBirthday(b1: Birthday, b2: Birthday): Date {
 
   let date = calcHalfwayBirthday(
     new Date(currentYear, b1[0] - 1, b1[1]),
-    new Date(currentYear, b2[0] - 1, b2[1])
+    new Date(currentYear, b2[0] - 1, b2[1]),
   );
 
   while (date < today) {
@@ -21,8 +21,8 @@ export function calcHalfwayBirthday(b1: Date, b2: Date): Date {
     [b1, b2] = [b2, b1];
   }
 
-  const midTimestamp = (b1.getTime() + b2.getTime()) / 2;
-  return new Date(midTimestamp);
+  const midDate = new Date((b1.getTime() + b2.getTime()) / 2);
+  return new Date(midDate.getFullYear(), midDate.getMonth(), midDate.getDate());
 }
 
 export function diffYMDHMS(from: Date, to: Date) {
