@@ -8,12 +8,13 @@
     "moreTools": "その他のツール",
     "language": "言語",
     "options": "オプション",
-    "share": "シェア"
+    "share": "シェア",
+    "addToCalendar": "Googleカレンダーに追加"
   },
   "pages": {
     "/logo-generator": {
       "title": "勇者であるシリーズ（ゆゆゆ）ロゴジェネレーター",
-      "description": "勇者であるシリーズ（ゆゆゆ）のロゴをカスタマイズで生成します",
+      "description": "勇者であるシリーズ（ゆゆゆ）のロゴをカスタマイズで生成する",
       "firstLine": "一行目",
       "secondLine": "二行目",
       "selectSeries": "シリーズを選択",
@@ -43,7 +44,7 @@
     },
     "/wkck-mannaka-birthday": {
       "title": "わかちか真ん中バースデーカウントダウン",
-      "description": "次のわかちか真ん中バースデーまでひたすらカウントダウンします",
+      "description": "次のわかちか真ん中バースデーまでひたすらカウントダウンする",
       "caption": "次のわかちか真ん中バースデー {birthday} まであと {countdown}",
       "shareTextTemplate": "次のわかちか真ん中バースデー（{birthday}）まであと{countdown}です。",
       "countdownTemplate": "{days}{daysWord}{hours}{hoursWord}{minutes}{minutesWord}{seconds}{secondsWord}",
@@ -51,7 +52,11 @@
       "days": "日",
       "hours": "時間",
       "minutes": "分",
-      "seconds": "秒"
+      "seconds": "秒",
+      "calenderTexts": {
+        "eventName": "わかちか真ん中バースデー",
+        "location": "わかちか広場"
+      }
     }
   }
 }

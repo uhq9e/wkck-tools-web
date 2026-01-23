@@ -39,22 +39,22 @@ const twitterShareUrl = computed(() => {
       days: countdownToBirthday.value.days,
       daysWord: $t(
         "pages./wkck-mannaka-birthday.days",
-        countdownToBirthday.value.days
+        countdownToBirthday.value.days,
       ),
       hours: countdownToBirthday.value.hours,
       hoursWord: $t(
         "pages./wkck-mannaka-birthday.hours",
-        countdownToBirthday.value.hours
+        countdownToBirthday.value.hours,
       ),
       minutes: countdownToBirthday.value.minutes,
       minutesWord: $t(
         "pages./wkck-mannaka-birthday.minutes",
-        countdownToBirthday.value.minutes
+        countdownToBirthday.value.minutes,
       ),
       seconds: countdownToBirthday.value.seconds,
       secondsWord: $t(
         "pages./wkck-mannaka-birthday.seconds",
-        countdownToBirthday.value.seconds
+        countdownToBirthday.value.seconds,
       ),
     }),
   });
@@ -64,8 +64,23 @@ const twitterShareUrl = computed(() => {
   return `https://twitter.com/intent/tweet?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(text)}&hashtags=${encodeURIComponent(hashTags.map((t) => t.replace(/ /g, "")).join(","))}`;
 });
 
+const addToCalendarUrl = computed(() => {
+  const eventName = $t("pages./wkck-mannaka-birthday.calenderTexts.eventName");
+  const location = $t("pages./wkck-mannaka-birthday.calenderTexts.location");
+  const datesString = buildGoogleCalendarDateString(nextHalfwayBirthday.value);
+
+  return `https://www.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(eventName)}&dates=${datesString}&location=${encodeURIComponent(location)}`;
+});
+
 const start = new Date();
 const count = ref(0);
+
+function buildGoogleCalendarDateString(date: Date) {
+  const dateString = `${date.getFullYear()}${(date.getMonth() + 1)
+    .toString()
+    .padStart(2, "0")}${date.getDate().toString().padStart(2, "0")}`;
+  return `${dateString}T000000/${dateString}T235959`;
+}
 
 function tick() {
   count.value++;
@@ -99,7 +114,7 @@ setTimeout(tick, 1000);
                 {{
                   $t(
                     `pages./wkck-mannaka-birthday.${key}`,
-                    countdownToBirthday[key]
+                    countdownToBirthday[key],
                   )
                 }}
               </div>
@@ -114,7 +129,7 @@ setTimeout(tick, 1000);
               new Date(
                 nextHalfwayBirthday.getFullYear(),
                 ChikageBirthday[0] - 1,
-                ChikageBirthday[1]
+                ChikageBirthday[1],
               ).toLocaleDateString()
             }}
           </div>
@@ -130,7 +145,7 @@ setTimeout(tick, 1000);
               new Date(
                 nextHalfwayBirthday.getFullYear(),
                 WakabaBirthday[0] - 1,
-                WakabaBirthday[1]
+                WakabaBirthday[1],
               ).toLocaleDateString()
             }}
           </div>
@@ -138,12 +153,20 @@ setTimeout(tick, 1000);
       </template>
     </I18nT>
     <ClientOnly>
-      <NuxtLink :to="twitterShareUrl" target="_blank">
-        <Button size="sm">
-          <Icon name="uil:twitter" />
-          {{ $t("shared.share") }}
-        </Button>
-      </NuxtLink>
+      <div class="flex flex-row gap-2">
+        <NuxtLink :to="twitterShareUrl" target="_blank">
+          <Button size="sm">
+            <Icon name="uil:twitter" />
+            {{ $t("shared.share") }}
+          </Button>
+        </NuxtLink>
+        <NuxtLink :to="addToCalendarUrl" target="_blank">
+          <Button size="sm">
+            <Icon name="uil:calendar-alt" />
+            {{ $t("shared.addToGoogleCalendar") }}
+          </Button>
+        </NuxtLink>
+      </div>
     </ClientOnly>
   </ToolPageLayout>
 </template>

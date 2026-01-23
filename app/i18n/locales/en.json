@@ -8,7 +8,8 @@
     "moreTools": "More tools",
     "language": "Language",
     "options": "Options",
-    "share": "Share"
+    "share": "Share",
+    "addToGoogleCalendar": "Add to Google Calendar"
   },
   "pages": {
     "/logo-generator": {
@@ -51,7 +52,11 @@
       "days": "days | day | days",
       "hours": "hours | hour | hours",
       "minutes": "minutes | minute | minutes",
-      "seconds": "seconds | second | seconds"
+      "seconds": "seconds | second | seconds",
+      "calenderTexts": {
+        "eventName": "WakaChika Halfway Birthday",
+        "location": "わかちか広場"
+      }
     }
   }
 }

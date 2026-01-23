@@ -8,7 +8,8 @@
     "moreTools": "更多工具",
     "language": "语言",
     "options": "选项",
-    "share": "分享"
+    "share": "分享",
+    "addToGoogleCalendar": "添加到Google日历"
   },
   "pages": {
     "/logo-generator": {
@@ -51,7 +52,11 @@
       "days": "天",
       "hours": "小时",
       "minutes": "分钟",
-      "seconds": "秒"
+      "seconds": "秒",
+      "calenderTexts": {
+        "eventName": "若千中间日",
+        "location": "わかちか広場"
+      }
     }
   }
 }
