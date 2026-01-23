@@ -3,8 +3,8 @@ import { seriesNames } from "../../app/commons/logo-generator";
 
 import "zod-openapi";
 
-export const availableFormat = ["png", "svg"] as const;
-export type AvailableFormat = (typeof availableFormat)[number];
+export const availableFormats = ["png", "svg"] as const;
+export type AvailableFormat = (typeof availableFormats)[number];
 
 const hexColorRegex = /^#([0-9a-fA-F]{6}|[0-9a-fA-F]{3})$/;
 
@@ -76,7 +76,7 @@ export const LogoGeneratorInputSchema = z.object({
         "Comma-separated list of highlight ranges in the format line:start-end (e.g., 0:0-2,1:1-3)",
       example: "1:0-1",
     }),
-  format: z.enum(availableFormat).default("png").meta({
+  format: z.enum(availableFormats).default("png").meta({
     description: "Format of the generated image",
     example: "png",
   }),
