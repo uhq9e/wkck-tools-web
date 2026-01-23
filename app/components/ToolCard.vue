@@ -21,8 +21,8 @@ const {
       <Separator />
     </template>
     <div class="px-3 py-2">
-      <div v-if="title" class="mb-1">{{ title }}</div>
-      <div v-if="description" class="text-sm text-muted-foreground">
+      <div v-if="title" class="mb-1 font-bold">{{ title }}</div>
+      <div v-if="description" class="text-xs text-muted-foreground">
         {{ description }}
       </div>
     </div>
